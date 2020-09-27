@@ -26,7 +26,7 @@ body{
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    border: #c59803 100px;          
+             
 }
 .menu img{
     width: 50%;
@@ -74,6 +74,8 @@ ul{
     height: 50vh;
     display: flex;
     align-items: flex-end;
+    border-top: dashed #c59803;
+    border-bottom: dashed #c59803;
     
 
 }
