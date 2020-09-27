@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: danmark;
+    color: #c59803;
+    
+}
+body{
+    background-image: url(../img/backgrounds/backPrincip.jpg);
+}
+
+
+@font-face {
+    font-family: gabriola;
+    src: url(../fonts/Gabriola.ttf);
+}
+@font-face {
+    font-family: danmark;
+    src: url(../fonts/DanmarkURWTDem.ttf);
+}
+@font-face {
+    font-family: system;
+    src: url(../fonts/System.ttf);
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    border: #c59803 100px;          
+}
+.menu img{
+    width: 50%;
+}
+header li{
+    width: 20%;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-family: gabriola;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 15vh;
+}
+
+
+
+#rep{
+    width: 70%;
+}
+
+p{
+    text-align: end;
+}
+
+ul{
+    width: 80%;
+    list-style: none;
+    margin-left: 20%;  
+}
+
+.bann {
+    background-image: url(../img/banniere.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: flex-end;
+    
+
+}
+
+.bann img{
+    width: 30%;
+    
+}
+
+
+
+button{
+    width: 100%;
+    background-image: url(../img/backgrounds/backPrincip.jpg);
+}
+
+.miniRep20{
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 100%;
+    opacity: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.fondRep20{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 4em;
+    border-style: inset;
+    border-radius: 1.5vh;
+    border-width: 1vh;
+}
+.miniRep20:hover{
+    background-size: 60%;
+    background-position: 0 -3vh;
+    opacity: 100%;
+}
+.fondRep20:hover{
+    border-style: outset;
+    border-radius: 2vh;
+}
+
+.miniRep20 p{
+    font-size: larger;
+    color: crimson;
+    font-weight: bold;
+    text-shadow: #000 0px 0px 3px;
+}
+
+.fondRep21{
+    background-image: url(../img/fondRep/fondRep2-1.png);
+}
+.miniRep21{
+    background-image: url(../img/mini/mini-book1.png);
+}
+.miniRep21:hover{
+    background-position: 0 -6vh;
+}
+
+.fondRep22{
+    background-image: url(../img/fondRep/fondRep2-2.png);
+    
+}
+.miniRep22{
+    background-image: url(../img/mini/mini-book2.png);
+}
+.miniRep22:hover{
+    background-position: 0 -6vh;
+}
+
+.fondRep23{
+    background-image: url(../img/fondRep/fondRep2-3.png);   
+}
+.miniRep23{
+    background-image: url(../img/mini/mini-book3.png);
+}
+.fondRep23 .miniRep23:hover{
+    background-size: 70%;
+    background-position: 0 -2vh;    
+}
+
+.fondRep24{
+    background-image: url(../img/fondRep/fondRep2-4.png);  
+}
+.miniRep24{
+    background-image: url(../img/mini/mini-book4.png);
+}
+.miniRep24:hover{
+    background-position: 0 -3vh;
+}
+
+
+
+
