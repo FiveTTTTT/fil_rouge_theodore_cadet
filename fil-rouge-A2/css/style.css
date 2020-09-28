@@ -39,17 +39,17 @@ header li{
 main{
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
+    text-align: center;
 }
 
 h1{
     font-family: gabriola;
     text-align: center;
     text-decoration: underline;
+    
 }
-
-
 
 #rep{
     width: 70%;
@@ -234,3 +234,22 @@ button{
 .miniRep17{
     background-image: url(../img/mini/miniByl.png);
 }
+
+
+
+
+footer{
+    background-color: black;
+    opacity: 60%;
+    height: 20vh;
+}
+
+footer .menu{
+    display: flex;
+    justify-content: space-around;
+    
+}
+footer .menu li{
+    margin: 5vh;
+}
+
