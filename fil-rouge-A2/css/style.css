@@ -39,7 +39,6 @@ header li{
 main{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
     text-align: center;
 }
@@ -252,4 +251,67 @@ footer .menu{
 footer .menu li{
     margin: 5vh;
 }
+
+main .resultats{
+    width: 100%;
+}
+main .resultats li{
+    border:  #c59803 dashed;
+    background-image: url(../img/backgrounds/backRes.jpg.png);
+    background-size: 20vh;
+    background-repeat: no-repeat;
+    height: 10vh;
+    margin: 1vh;
+}
+
+main .resultats li p{
+    text-shadow: black 1px 0 7px;
+    font-size: 3vh;
+    text-align: end;
+    padding-right: 5vh;
+}
+
+.resultats .resAlf{
+    width: 16%;
+}
+.resultats .resMar{
+    width: 64%;
+    background-size: 100%;
+    background-position: 0.5vh;
+}
+.resultats .resSel{
+    width: 46%;
+    background-size: 100%;
+    background-position: 0.5vh;
+}
+.resultats .resLei{
+    width: 20%;
+}
+.resultats .resChr{
+    width: 10%;
+    
+}
+.resultats .resCor{
+    width: 16%;
+    
+}
+.resultats .resByl{
+    width: 28%;
+    background-size: 100%;
+    background-position: 0.5vh;
+}
+
+.no-participation{
+    display: none;
+}
+p .no-participation{
+    display: block;
+}
+
+
+
+
+
+
+
 
