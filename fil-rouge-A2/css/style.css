@@ -234,13 +234,17 @@ button{
     background-image: url(../img/mini/miniByl.png);
 }
 
-
+.formu{
+    margin: 5%;
+}
 
 
 footer{
     background-color: black;
     opacity: 60%;
     height: 20vh;
+    width: 100%;
+    
 }
 
 footer .menu{
@@ -307,6 +311,54 @@ main .resultats li p{
 p .no-participation{
     display: block;
 }
+
+@media screen and (min-width: 640px) and (max-width: 1000px){
+    .menu img{
+        width: 30%;
+    }
+    .bann{
+        background-size: 80vh;
+        background-position: 60vh -10vh;
+    }
+    .bann img{
+        width: 18%;
+    }
+    .miniRep0{
+        background-size: 40%;
+    }
+    .fondRep0{
+        height: 8em;
+    }
+    .miniRep0:not(.fini):hover{
+        background-size: 50%;
+    }
+
+
+    .resultats .resAlf{
+        width: 16%;
+        background-size: 100%;
+        background-position: 0.5vh;
+    }
+    .resultats .resLei{
+        width: 20%;
+        background-size: 100%;
+        background-position: 0.5vh;
+    }
+    .resultats .resChr{
+        width: 10%;
+        background-size: 100%;
+        background-position: 0.5vh;
+        
+    }
+    .resultats .resCor{
+        width: 16%;
+        background-size: 100%;
+        background-position: 0.5vh;
+        
+    }
+
+}
+
 
 
 
