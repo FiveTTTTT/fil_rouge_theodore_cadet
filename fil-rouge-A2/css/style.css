@@ -31,6 +31,12 @@ body{
 .menu img{
     width: 50%;
 }
+
+.menu li{
+    display: flex;
+    flex-direction: column;
+}
+
 header li{
     width: 20%;
 }
@@ -90,6 +96,11 @@ ul{
     
 }
 
+.intro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 button{
@@ -178,6 +189,11 @@ button{
     display: none;
 }
 
+#sondage1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .sond1 button{
     opacity: 60%;
@@ -318,11 +334,12 @@ p .no-participation{
     }
     .bann{
         background-size: 80vh;
-        background-position: 60vh -10vh;
+        background-position: 40vh -10vh;
     }
     .bann img{
         width: 18%;
     }
+
     .miniRep0{
         background-size: 40%;
     }
@@ -357,6 +374,56 @@ p .no-participation{
         
     }
 
+}
+
+@media screen and (min-width: 1000px){
+    .menu{
+        margin-left: 10%;
+    }
+    .menu img{
+        width: 20%;
+    }
+    .bann{
+        background-size: 80vh;
+        background-position: 60vh -10vh;
+    }
+    .bann img{
+        width: 14%;
+        margin-left: 17vh;
+    }
+
+    .miniRep0{
+        background-size: 40%;
+    }
+    .fondRep0{
+        height: 9.5em;
+    }
+    .miniRep0:not(.fini):hover{
+        background-size: 50%;
+    }
+
+    .resultats .resAlf{
+        width: 16%;
+        background-size: 100%;
+        background-position: 0.5vh;
+    }
+    .resultats .resLei{
+        width: 20%;
+        background-size: 100%;
+        background-position: 0.5vh;
+    }
+    .resultats .resChr{
+        width: 10%;
+        background-size: 100%;
+        background-position: 0.5vh;
+        
+    }
+    .resultats .resCor{
+        width: 16%;
+        background-size: 100%;
+        background-position: 0.5vh;
+        
+    }
 }
 
 
