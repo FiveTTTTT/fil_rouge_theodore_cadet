@@ -7,6 +7,11 @@ formCo.className="formCoClasse"
 const nameMailMdpCo = ["Votre nom","Votre addresse email","Votre mot de passe"]
 var isPseudo=false;
 
+// var oops = document.createElement('p');
+// oops.id=""
+// oops.innerHTML="oops il semblerait que vous ayez été déconecté!"
+// document.getElementById("oopsCoId ").appendChild(attenduCo);
+
 // create the connection popUp 
 function popUpCo() {
     if (!isPseudo) {
@@ -20,7 +25,7 @@ function popUpCo() {
         fondCo.style.alignItems= "center";
         fondCo.style.flexDirection="column"
 
-        // 
+        
         formCo.style.backgroundColor= " red";
         formCo.style.width = " 60% ";
         formCo.style.borderRadius="211px";
@@ -48,6 +53,7 @@ function popUpCo() {
 
 // create 3 
 function nameMailMdp(connec) {
+    
     for (let i = 0; i < connec.length; i++) {
         if (i==0) {
             var formCoNmm = document.createElement('div');
@@ -100,6 +106,8 @@ function destroyThat(co) {
             
             if (name.length>4) {
                 co.reverse();
+                isPseudo=true
+            fondCo.style.zIndex= "-2";
             }
             else{
                 var needNameCo =document.createElement('p');
@@ -107,7 +115,7 @@ function destroyThat(co) {
                 document.getElementById("formCoId").appendChild(needNameCo);
 
             }
-            isPseudo=true
+            
         });
         
         return isPseudo
@@ -130,6 +138,35 @@ function affichePseudo(nom) {
     affPseu.innerHTML=nom;
     document.body.appendChild(affPseu);
 }
+
+
+
+
+
+
+
+
+const tabY =[0,1,2,3]
+for (let i = 0; i < tabY.length; i++) {
+    const element = tabY[i];
+    const element2 = tabY[i]+2;
+   
+    strelement = element.toString() 
+    strelement2 = element2.toString()
+    var oops = document.createElement('p');
+    oops.className=strelement+i ;
+    oops.className=strelement2+i;
+    document.body.appendChild(oops);
+}
+
+
+// oops.innerHTML="oops il semblerait que vous ayez été déconecté!"
+// document.getElementById("oopsCoId").appendChild(attenduCo);
+
+
+
+
+
 
 
 

@@ -1,12 +1,15 @@
 Fil rouge :
 
-Un Sondage est un objet qui contient des Questions
-qui elles même contiennent des Réponses dont une ou 
-plusieurs sont justes.
+// Un Sondage est un objet qui contient des Questions
+// qui elles même contiennent des Réponses 
 
-Au chargement de la page afficher le titre du 
-sondage, la première question et les différentes 
-réponses possibles. Lorsqu’une réponse est validée, 
+dont une ou plusieurs sont justes.
+
+// Au chargement de la page afficher le titre du 
+// sondage, la première question et les différentes 
+// réponses possibles. 
+
+Lorsqu’une réponse est validée, 
 on affiche la questions suivante et on comptabilise 
 la bonne ou mauvaise réponse dans une variable JS.
 
@@ -15,9 +18,11 @@ bonnes réponses et afficher un score de x/y
 (si série de y questions, par exemple). 
 Calculer un nombre de points obtenus sur 100.
 
-Demande le nom de l’utilisateur à sa connexion via un 
-petit formulaire pop-up (animé) et enregistrer ce nom
-dans une variable, qu’il faudra afficher dans une 
+// Demande le nom de l’utilisateur à sa connexion via un 
+// petit formulaire pop-up (animé) et enregistrer ce nom
+// dans une variable, 
+
+qu’il faudra afficher dans une 
 des coins de l’écran et sur l’écran final des scores.
 
 
@@ -26,3 +31,299 @@ Sondage = { title : “Qui va survivre dans GOT ?”, questions : [
 		{ choice : “oui”, isRight : true},
 		{ choice : “non” isRight : false}] }
 ]};
+
+
+
+recherche d'un terme dans une liste
+
+
+// var testX = document.createElement('div');
+// testX.id="wsh"
+// document.body.firstChild(testX);
+// document.getElementsByTagName("main").appendChild(testX);
+
+sondage1={
+    question:"Pamis les personnages principaux de la série qui n'ont pas encore de version Brave lequel gagnera la prochaine fois?", 
+    response:["Alfonse","Marth","Seliph","Leif","Chrom","Corrin","Byleth"]
+}
+sondage2={
+    question:"Selon vous, quel est le meilleur livre de FEH?", 
+    response:["Livre 1","Livre 2","Livre 3","Livre 4"]
+}
+var questSond2 =document.createElement('h3');
+questSond2.innerHTML=sondage2.question
+
+var ulRep =document.createElement('ul');
+questSond2.id="sond2"
+
+sondages= [sondage1, sondage2]
+
+function creaSond2(sondas) {
+    
+    document.body.insertBefore(questSond2, coSql);
+    document.getElementsById("sond2").appendChild(ulRep);
+
+    for (let i = 0; i < sondas.response.length; i++) {
+        var strI=(i+1).toString() 
+
+        var listRep=document.createElement('li');
+        listRep.className="listRep"
+
+        var repon = document.createElement('div');
+        repon.id="repon"
+
+        var buttRep =document.createElement('button');
+        buttRep.type="submit"
+        buttRep.id="buttRep"
+        
+        
+        var fondRep =document.createElement('div');
+        fondRep.id="fondRep0"
+        fondRep.className="fondRep2"+strI
+
+        var miniRep =document.createElement('div');
+        miniRep.id="miniRep0"
+        miniRep.className="miniRep2"+strI
+
+        repRep =document.createElement('p');
+
+        
+        // document.getElementById("formCoId").appendChild(contenuCo);
+        // document.getElementsByClassName("sond2").appendChild(listRep);
+        // document.getElementsByClassName("listRep").appendChild(repon);
+        document.getElementsById("repon").appendChild(buttRep);
+        document.getElementsById("buttRep").appendChild(fondRep);
+        document.getElementsById("fondRep0").appendChild(miniRep);
+        document.getElementsById("miniRep0").appendChild(repRep);
+        repRep.innerHTML=sondas.response[i]
+        
+    }
+    
+}
+creaSond2(sondage2)
+
+
+
+// If (input==sondage1.reponse[3]){
+//      Points =10
+// }
+// Else if (réponse 4){
+//      Points =3
+
+// }
+// Else {
+//   Point=5
+// }
+
+
+
+// const tabY =[0,1,2,3]
+// for (let i = 0; i < tabY.length; i++) {
+//     const element = tabY[i];
+   
+//     strelement = element.toString() 
+//     var oops = document.createElement('p');
+//     oops.id=strelement+i;
+//     document.body.appendChild(oops);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var fondCo = document.createElement('div');
+fondCo.id="fondCoId"
+fondCo.className="fondCoClasse"
+var formCo = document.createElement('form');
+formCo.id= "formCoId"
+formCo.className="formCoClasse"
+const nameMailMdpCo = ["Votre nom","Votre addresse email","Votre mot de passe"]
+var isPseudo=false;
+
+// var oops = document.createElement('p');
+// oops.id=""
+// oops.innerHTML="oops il semblerait que vous ayez été déconecté!"
+// document.getElementById("oopsCoId ").appendChild(attenduCo);
+
+// create the connection popUp 
+function popUpCo() {
+    if (!isPseudo) {
+        fondCo.style.backgroundColor= " rgba(0,0,0,0.5)";
+        fondCo.style.position = " fixed ";
+        fondCo.style.width = " 100% ";
+        fondCo.style.height = " 100% ";
+        fondCo.style.zIndex= "1";
+        fondCo.style.display = " flex ";
+        fondCo.style.justifyContent="center";
+        fondCo.style.alignItems= "center";
+        fondCo.style.flexDirection="column"
+
+        
+        formCo.style.backgroundColor= " red";
+        formCo.style.width = " 60% ";
+        formCo.style.borderRadius="211px";
+        formCo.style.padding="7vh";
+        formCo.style.display = " flex ";
+        formCo.style.justifyContent="center";
+        formCo.style.alignItems= "center";
+        formCo.style.flexDirection="column"
+
+
+        
+        document.body.insertBefore(fondCo, coSql);
+        document.getElementById("fondCoId").appendChild(formCo);
+        nameMailMdp(nameMailMdpCo);
+        var tlCo=new TimelineMax();
+        tlCo.staggerFrom('.fondCoClasse', 0.1,{x:0,y:0, opacity:0});
+        tlCo.staggerFrom('.formCoClasse', 1,{x:0,y:100, opacity:0});
+        destroyThat(tlCo)
+        console.log(destroyThat(tlCo))
+        if (destroyThat(tlCo)) {
+            affichePseudo(name)
+        }
+    }
+}
+
+// create 3 
+function nameMailMdp(connec) {
+    
+    for (let i = 0; i < connec.length; i++) {
+        if (i==0) {
+            var formCoNmm = document.createElement('div');
+            const nMM = connec[i];
+            var contenuCo = document.createElement('p');
+            contenuCo.innerHTML=nMM;
+            var attenduCo = document.createElement('input');
+            attenduCo.type="text";
+            attenduCo.name="pseudo"
+            attenduCo.className="pseudo"
+            // attenduCo.required = true;
+
+            document.getElementById("formCoId").appendChild(contenuCo);
+            document.getElementById("formCoId").appendChild(attenduCo);
+        }
+        else{
+            var formCoNmm = document.createElement('div');
+        const nMM = connec[i];
+        var contenuCo = document.createElement('p');
+        contenuCo.innerHTML=nMM;
+        var attenduCo = document.createElement('input');
+        attenduCo.type="text";
+
+        document.getElementById("formCoId").appendChild(contenuCo);
+        document.getElementById("formCoId").appendChild(attenduCo);
+        
+        }
+        
+    }
+    
+    var subCo = document.createElement('input');  
+    subCo.type="button";
+    subCo.className="buttonCo"
+    subCo.innerHTML="se connecter"
+    // subCo.onclick="destroyThat(fondCo)"
+
+    subCo.value = "Me connecter";
+    document.getElementById("formCoId").appendChild(subCo);
+    
+    
+    
+}
+
+popUpCo()
+
+function destroyThat(co) {
+    // 
+        $('.buttonCo').click(function(){
+            var name=$(".pseudo").val();
+            
+            if (name.length>4) {
+                co.reverse();
+            }
+            else{
+                var needNameCo =document.createElement('p');
+                needNameCo.innerHTML="Vous devez indiquer un pseudo d'au moins 5 character";
+                document.getElementById("formCoId").appendChild(needNameCo);
+
+            }
+            isPseudo=true
+            fondCo.style.zIndex= "-2";
+        });
+        
+        return isPseudo
+        
+        
+    
+}
+
+function affichePseudo(nom) {
+    var affPseu = document.createElement('div');
+    affPseu.id="affPseuId"
+    affPseu.style.backgroundColor= " red";
+    affPseu.style.position = " fixed ";
+    affPseu.style.borderRadius="211px";
+    affPseu.style.padding="2vh";
+    affPseu.style.width="100px"
+    affPseu.style.zIndex= "2";
+    affPseu.style.display = " flex ";
+    affPseu.style.flexDirection="raw-reverse"
+    affPseu.innerHTML=nom;
+    document.body.appendChild(affPseu);
+}
+
+
+
+
+
+
+
+
+const tabY =[0,1,2,3]
+for (let i = 0; i < tabY.length; i++) {
+    const element = tabY[i];
+    const element2 = tabY[i]+2;
+   
+    strelement = element.toString() 
+    strelement2 = element2.toString()
+    var oops = document.createElement('p');
+    oops.className=strelement+i ;
+    oops.className=strelement2+i;
+    document.body.appendChild(oops);
+}
+
+
+// oops.innerHTML="oops il semblerait que vous ayez été déconecté!"
+// document.getElementById("oopsCoId").appendChild(attenduCo);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

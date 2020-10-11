@@ -96,6 +96,13 @@ ul{
     
 }
 
+.buttRepB{
+
+}
+.repP{
+    
+}
+
 .intro{
     display: flex;
     align-items: center;
@@ -106,6 +113,9 @@ ul{
 button{
     width: 100%;
     background-image: url(../img/backgrounds/backPrincip.jpg);
+    border-style: none;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
 }
 
 .miniRep0{
@@ -187,6 +197,11 @@ button{
 
 .avenir{
     display: none;
+}
+
+#sond2{
+    display: flex;
+    justify-content: center;
 }
 
 #sondage1{
