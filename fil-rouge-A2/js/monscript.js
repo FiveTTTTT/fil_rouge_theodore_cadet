@@ -1,51 +1,56 @@
 var fondCo = document.createElement('div');
 fondCo.id="fondCoId"
 fondCo.className="fondCoClasse"
-var divCo = document.createElement('div');
-divCo.id= "divCoId"
-divCo.className="divCoClasse"
+var formCo = document.createElement('form');
+formCo.id= "formCoId"
+formCo.className="formCoClasse"
 const nameMailMdpCo = ["Votre nom","Votre addresse email","Votre mot de passe"]
 var isPseudo=false;
 
 // create the connection popUp 
 function popUpCo() {
-    
-    fondCo.style.backgroundColor= " rgba(0,0,0,0.5)";
-    fondCo.style.position = " fixed ";
-    fondCo.style.width = " 100% ";
-    fondCo.style.height = " 100% ";
-    fondCo.style.zIndex= "1";
-    fondCo.style.display = " flex ";
-    fondCo.style.justifyContent="center";
-    fondCo.style.alignItems= "center";
-    fondCo.style.flexDirection="column"
+    if (!isPseudo) {
+        fondCo.style.backgroundColor= " rgba(0,0,0,0.5)";
+        fondCo.style.position = " fixed ";
+        fondCo.style.width = " 100% ";
+        fondCo.style.height = " 100% ";
+        fondCo.style.zIndex= "1";
+        fondCo.style.display = " flex ";
+        fondCo.style.justifyContent="center";
+        fondCo.style.alignItems= "center";
+        fondCo.style.flexDirection="column"
 
-    // 
-    divCo.style.backgroundColor= " red";
-    divCo.style.width = " 60% ";
-    divCo.style.borderRadius="211px";
-    divCo.style.padding="7vh";
-    divCo.style.display = " flex ";
-    divCo.style.justifyContent="center";
-    divCo.style.alignItems= "center";
-    divCo.style.flexDirection="column"
+        // 
+        formCo.style.backgroundColor= " red";
+        formCo.style.width = " 60% ";
+        formCo.style.borderRadius="211px";
+        formCo.style.padding="7vh";
+        formCo.style.display = " flex ";
+        formCo.style.justifyContent="center";
+        formCo.style.alignItems= "center";
+        formCo.style.flexDirection="column"
 
 
-    
-    document.body.insertBefore(fondCo, coSql);
-    document.getElementById("fondCoId").appendChild(divCo);
-    nameMailMdp(nameMailMdpCo);
-    var tlCo=new TimelineMax();
-    tlCo.staggerFrom('.fondCoClasse', 0.1,{x:0,y:0, opacity:0});
-    tlCo.staggerFrom('.divCoClasse', 1,{x:0,y:100, opacity:0});
-    destroyThat(tlCo)
+        
+        document.body.insertBefore(fondCo, coSql);
+        document.getElementById("fondCoId").appendChild(formCo);
+        nameMailMdp(nameMailMdpCo);
+        var tlCo=new TimelineMax();
+        tlCo.staggerFrom('.fondCoClasse', 0.1,{x:0,y:0, opacity:0});
+        tlCo.staggerFrom('.formCoClasse', 1,{x:0,y:100, opacity:0});
+        destroyThat(tlCo)
+        console.log(destroyThat(tlCo))
+        if (destroyThat(tlCo)) {
+            affichePseudo(name)
+        }
+    }
 }
 
 // create 3 
 function nameMailMdp(connec) {
     for (let i = 0; i < connec.length; i++) {
         if (i==0) {
-            var divCoNmm = document.createElement('div');
+            var formCoNmm = document.createElement('div');
             const nMM = connec[i];
             var contenuCo = document.createElement('p');
             contenuCo.innerHTML=nMM;
@@ -53,60 +58,77 @@ function nameMailMdp(connec) {
             attenduCo.type="text";
             attenduCo.name="pseudo"
             attenduCo.className="pseudo"
+            // attenduCo.required = true;
 
-            document.getElementById("divCoId").appendChild(contenuCo);
-            document.getElementById("divCoId").appendChild(attenduCo);
+            document.getElementById("formCoId").appendChild(contenuCo);
+            document.getElementById("formCoId").appendChild(attenduCo);
         }
         else{
-            var divCoNmm = document.createElement('div');
+            var formCoNmm = document.createElement('div');
         const nMM = connec[i];
         var contenuCo = document.createElement('p');
         contenuCo.innerHTML=nMM;
         var attenduCo = document.createElement('input');
         attenduCo.type="text";
 
-        document.getElementById("divCoId").appendChild(contenuCo);
-        document.getElementById("divCoId").appendChild(attenduCo);
+        document.getElementById("formCoId").appendChild(contenuCo);
+        document.getElementById("formCoId").appendChild(attenduCo);
         
         }
         
     }
+    
     var subCo = document.createElement('input');  
-    subCo.type="submit";
+    subCo.type="button";
     subCo.className="buttonCo"
-    subCo.onclick="destroyThat(fondCo)"
-    subCo.innerHTML = "Me connecter";
-    document.getElementById("divCoId").appendChild(subCo);
-    if (isPseudo) {
-        affichePseudo(pseudo)
-    }
+    subCo.innerHTML="se connecter"
+    // subCo.onclick="destroyThat(fondCo)"
+
+    subCo.value = "Me connecter";
+    document.getElementById("formCoId").appendChild(subCo);
+    
+    
+    
 }
 
 popUpCo()
 
 function destroyThat(co) {
-    $('.buttonCo').click(function(){
-        co.reverse();
-        var pseudo=$(".pseudo").val();
+    // 
+        $('.buttonCo').click(function(){
+            var name=$(".pseudo").val();
+            
+            if (name.length>4) {
+                co.reverse();
+            }
+            else{
+                var needNameCo =document.createElement('p');
+                needNameCo.innerHTML="Vous devez indiquer un pseudo d'au moins 5 character";
+                document.getElementById("formCoId").appendChild(needNameCo);
+
+            }
+            isPseudo=true
+        });
         
-    });
-    isPseudo=true;
-    // console.log(pseudo)
-    // return pseudo;
+        return isPseudo
+        
+        
+    
 }
 
 function affichePseudo(nom) {
     var affPseu = document.createElement('div');
     affPseu.id="affPseuId"
-    affPseu.style.backgroundColor= " rgba(0,0,0,0.5)";
+    affPseu.style.backgroundColor= " red";
     affPseu.style.position = " fixed ";
-    affPseu.style.width = " 100% ";
-    affPseu.style.height = " 100% ";
-    affPseu.style.zIndex= "1";
+    affPseu.style.borderRadius="211px";
+    affPseu.style.padding="2vh";
+    affPseu.style.width="100px"
+    affPseu.style.zIndex= "2";
     affPseu.style.display = " flex ";
-    affPseu.style.justifyContent="center";
-    affPseu.style.alignItems= "center";
-    affPseu.style.flexDirection="column"
+    affPseu.style.flexDirection="raw-reverse"
+    affPseu.innerHTML=nom;
+    document.body.appendChild(affPseu);
 }
 
 
