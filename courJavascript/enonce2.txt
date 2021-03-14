@@ -1,0 +1,130 @@
+Thème Montagne
+
+Définissez un skieur (ou snowboarder), qui aura un nom, 
+un niveau de chauffe commençant à 1.
+
+Définissez une liste de pistes possédant un niveau 
+de difficulté de 1 à 4.
+
+Le skieur monte tout en haut de la montagne et va dévaler 
+les pistes jusqu’à la station en essayant d’arriver en vie,
+ manque de bol : il n’est pas chaud !
+
+Il va faire chaque piste définie dans un ordre aléatoire. 
+Il réussit une piste s’il est assez chaud pour ce niveau 
+de difficulté, et augmente son niveau de chauffe de 1 jusqu’à 
+un maximum de 4, s’il n’est pas assez chaud, il se casse la 
+figure et échoue sa folle descente.
+
+Sa seule chance de réussite est de faire les pistes dans 
+un ordre croissant pour se chauffer au fur et à mesure 
+(ou que vous ne mettez que des pistes facile, aussi).
+
+Affiche le nombre de pistes réussies et s’il arrive 
+à tout descendre ou se viande, via un console.log ou alert.
+
+
+
+
+
+Thème Métro
+
+On va terminer avec un trajet dans le beau, spacieux et 
+rapide… Métro parisien !
+
+Définir un objet passager lambda : vous. Avec votre nom, 
+niveau de calme (10 étant le zen parfait et 0 la crise de 
+rage meurtrière).
+
+Définir votre trajet en objet, avec le nombre d’arrêts 
+en ligne non automatique, le nombre d’arrêts en ligne 
+automatique et le nombre de changements au max.
+
+Au fur et à mesure de votre trajet, chaque arrêt restant 
+aura 30% de chance d’être un changement, et vous aurez 
+des chances égales de passer sur l’autre type de ligne ou 
+de rester sur la même.
+
+Si vous avez terminé tout le parcours d’un type de ligne, 
+alors vous changez et terminer le trajet sur le type de ligne 
+restant.
+
+À chaque arrêt, vous avez 20% de chance sur arrêt normal, 
+et 50% sur un changement, de rencontrer un emmerdeur, 
+un alcoolique, un pickpocket, ou autre, et ainsi de perdre 1 
+niveau de calme.
+
+À chaque perte de calme, vous avez une chance, 10% 
+supplémentaire par niveau de calme perdu et péter 
+un cable et de fini
+
+
+
+
+
+
+
+
+
+Thème Thriller
+
+Définissez un groupe de plusieurs survivants, qui 
+posséderont un nom, une valeur de force et l’ID 
+d’une caractéristique (qu’on va simuler par sa 
+position dans la collection de caractéristiques) 
+qui sera “sportif”, “nerd”, “black”, “blonde” ou 
+“pervers” (la bande clichée par excellence, il peut y en 
+avoir plusieurs de chaque type, et pas obligé un de chaque).
+
+Définir par extension une collection de caractéristiques 
+possédant donc… un nom, et une probabilité sur 100 (integer).
+
+Exemple : 
+const survivor = { name : “jean”, power:  4 (force), 
+                    carac : 1 (index de la carac) };
+const caracs = [
+    {name : “blonde”, proba : 70},
+    {name : “nerd”, proba : 10}
+];
+
+Définissez un tueur en série avec un nom et un nombre de point
+de vie.
+
+À chaque instant qui passe, et jusqu’à ce que tous les 
+survivants soient morts,
+Chaque survivant, dans un ordre aléatoire, a une chance 
+d’être attaqué par le tueur, chance plus ou moins importante 
+selon sa caractéristique. S’il est attaqué, il mourra et sera 
+retiré du jeu, et aura 50% de chance d’arriver à infliger sa 
+force en dégâts aux vies du tueur.
+
+Le jeu s’arrête lorsque tous les survivants sont morts, on 
+vérifie alors si les vies du tueur sont égales à 0 et s’il 
+s’effondre donc (on ne se pose pas la question pendant le 
+massacre, car il est bien connu qu’un Slayer ne s’arrête pas 
+sur le moment)
+
+Chaque attaque et chaque dégât infligé, ainsi que la résultat 
+final, sera affiché dans la page html avec un couleur 
+spécifique selon l’action.
+
+Rouge pour la mort d’un survivant, Vert pour le fait qu’un 
+survivant blesse le tueur, noir si le tueur est  vaincu après 
+le massacre.
+
+Vous avez déjà toutes les cartes en main à l’exception de la 
+partie manipulation du DOM et du HTML, n’hésitez pas pour 
+les questions !
+
+
+
+
+
+
+
+
+
+
+
+
+

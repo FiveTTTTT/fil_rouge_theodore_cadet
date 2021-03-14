@@ -1,0 +1,3 @@
+[2020-10-21 14:46:52] layer "logo.png": Duplicate path: logo.png
+[2020-10-21 14:46:52] layer "support@themeptation.com": Unsupported extension: com
+[2020-10-21 14:46:52] layer "+001-123-456-7890": Expected Either a default asset specification or a layer asset specification but "+" found.

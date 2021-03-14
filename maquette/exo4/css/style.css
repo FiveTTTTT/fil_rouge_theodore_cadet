@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    background-image: url(../imgs/overlay.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    
+    
+}
+
+header article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menuTop{
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+    margin-bottom: 5vh;
+}
+
+.menuNav{
+    list-style-type: none;
+    display: flex;
+    
+}
+.menuNav li{
+    margin: 7px;
+}
+.linkCont a{
+    margin: 5px;
+}
+
+.banHeader button{
+    background-image: linear-gradient(to top, #fd3fb3, #fd3f81, #fd3e4f);
+    width: 185px;
+    height: 57px;
+    font-size: 16.5px;
+}
+
+.banHeader *{
+    margin: 23px;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+.aboutUs{
+    background-image: linear-gradient(to top, #fd3fb3, #fd3f81, #fd3e4f);
+    padding:35px 68px ;
+}
+
+.aboutUs button{
+    width: 150px;
+    height: 7vh;
+    background-color: transparent;
+    border: solid 2px #ffffff;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+

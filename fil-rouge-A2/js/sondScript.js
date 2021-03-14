@@ -93,7 +93,7 @@ function creaSond2(sondas){
     isSond=2;
     var questSond2 =document.createElement('h3');
     questSond2.innerHTML=sondage2.question
-    questSond2.id="quest"
+    questSond2.id="quest2"
 
     var questRep =document.createElement('div');
     questRep.id="sond2"
@@ -148,7 +148,7 @@ function creaSond2(sondas){
     
             console.log( $( this ).text() );
             choix2=$( this ).text() ;
-            document.getElementById("quest").innerHTML = "";
+            document.getElementById("quest2").innerHTML = "";
             document.getElementById("sond2").innerHTML = "";
             resultSon()
         }
@@ -163,7 +163,23 @@ creaSond1(sondage1)
 
 
 function resultSon() {
-    console.log(choix1+choix2)
+    if (choix1=="Marth" && choix2=="Livre 2") {
+        var resSon=document.createElement('h2');
+        resSon.innerHTML= "Toutes vos réponces sont les bonnes, vous gagnez 10 points!"
+        document.getElementById("mains").insertBefore(resSon, entreBr);
+
+    }
+    if (choix1=="Marth" || choix2=="Livre 2") {
+        var resSon=document.createElement('h2');
+        resSon.innerHTML= "Une seule de vos réponces est les bonne, vous gagnez 5 points!"
+        document.getElementById("mains").insertBefore(resSon, entreBr);
+    }
+    else{
+        var resSon=document.createElement('h2');
+        resSon.innerHTML= "aucunes de vos réponces ne sont bonnes les bonne, vous gagnez rien..."
+        document.getElementById("mains").insertBefore(resSon, entreBr);
+    }
+    
 }
 
 

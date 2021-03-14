@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: auto;
+    width: ;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.choi{
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+.choi section{
+    width: 20%;
+}
+
+br{
+    background-color: #f57b3a;
+}
+
+
+
+

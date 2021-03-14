@@ -6,7 +6,7 @@ formCo.id= "formCoId"
 formCo.className="formCoClasse"
 const nameMailMdpCo = ["Votre nom","Votre addresse email","Votre mot de passe"]
 var isPseudo=false;
-
+var name="";
 // var oops = document.createElement('p');
 // oops.id=""
 // oops.innerHTML="oops il semblerait que vous ayez été déconecté!"
@@ -102,7 +102,7 @@ popUpCo()
 function destroyThat(co) {
     // 
         $('.buttonCo').click(function(){
-            var name=$(".pseudo").val();
+            name=$(".pseudo").val();
             
             if (name.length>4) {
                 co.reverse();
